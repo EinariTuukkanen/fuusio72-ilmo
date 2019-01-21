@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Fuusio71</title>
+
+    <link rel="icon" href="img/71fav.png" sizes="192x192" />
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/fuusio71.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('img/F71_web_bg_new.png')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                      <!-- <h1>Ilmoittaudu</h1>
+                        <hr class="small">
+                        <span id="registrationInfo" class="subheading"></span> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <span id="registrationInfo" class="subheading">Olet jonossa sijalla ..., täytä ilmoittautumislomake alla vahvistaaksesi ilmoittautumisen. Sinulla on ... minuuttia aikaa ennen lomakkeen vanhentumista.</span>
+
+                <p>Pakolliset kysymykset on merkitty tähdellä (*).</p>
+                <form id="registrationForm" novalidate>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>* Etunimi Sukunimi</label>
+                            <input type="text" class="form-control" placeholder="* Etunimi Sukunimi" id="name" name="name" required data-validation-required-message="Ole hyvä ja ilmoita nimesi.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>* Sähköposti</label>
+                            <input type="email" class="form-control" placeholder="* Sähköposti" id="email" name="email" required data-validation-required-message="Ole hyvä ja ilmoita sähköpostisi" data-validation-validemail-message="Sähköposti ei ole oikeassa muodossa">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group form-row form-group controls">
+                        <div class="form-group col-xs-4">
+                            <label>* Olen...</label>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="col-xs-8 controls">
+                            <select name="status" class="form-control form-select" required data-validation-required-message="Valitse yksi">
+                                <option value="">-- Valitse --</option>
+                                <!-- <option class="invite-status" value="inviteGuest">Kutsuvieras</option> -->
+                                <option value="student">Opiskelija (65 €)</option>
+                                <option value="notStudent">Valmistunut (90 €)</option>
+                                <option value="company">Yritysedustaja</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row control-group form-row form-group controls">
+                        <div class="form-group col-xs-4">
+                            <label>* Olen...</label>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="col-xs-8 controls">
+                            <select id="guildStatus" name="guildStatus" class="form-control form-select" required data-validation-required-message="Valitse yksi">
+                                <option value="">-- Valitse --</option>
+                                <!-- <option value="inviteGuest">Kutsuvieras</option>
+                                <option value="currentMember">Fyysikkokillan nykyinen jäsen</option>
+                                <option value="avec">Fyysikkokiltalaisen avec</option> -->
+                                <!-- <option value="other">Ei mikään edellisistä</option> -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row control-group form-row form-group controls">
+                        <div class="col-xs-6">
+                            <label>* Ilmoittaudun myös sillikselle (+15 €)</label>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="col-xs-3">
+                            <label class="radio-inline">
+                              <input type="radio" name="sillis" minchecked="1" data-validation-minchecked-message="Valitse toinen" value="true">
+                              <span class="radio-label">Kyllä</span>
+                            </label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label class="radio-inline">
+                              <input type="radio" name="sillis" value="false">
+                              <span class="radio-label">Ei</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Pöytäseurue</label>
+                            <input type="text" class="form-control" placeholder="Pöytäseurue" id="table" name="table">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Avecin nimi</label>
+                            <input type="text" class="form-control" placeholder="Avecin nimi" id="avec" name="avec">
+                            <p class="help-block text-danger"></p>
+                            <p class="help-block info">Avecin on ilmoittaudutava erikseen</p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Opintojen aloitusvuosi</label>
+                            <input type="text" class="form-control" placeholder="Opintojen aloitusvuosi" id="firstYear" name="firstYear">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Allergiat ja erikoisruokavalio</label>
+                            <textarea rows="2" class="form-control" placeholder="Allergiat ja erikoisruokavalio" id="allergies" name="allergies"></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group form-row form-group controls">
+                        <div class="form-group col-xs-5">
+                            <label>* Juomamenu</label>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="col-xs-7 controls">
+                            <select name="drinkMenu" class="form-control form-select" required data-validation-required-message="Valitse yksi">
+                                <option value="">-- Valitse --</option>
+                                <option value="alcoholic">Alkoholillinen</option>
+                                <option value="nonAlcoholic">Alkoholiton</option>
+                                <option value="onlyWines">Pelkät viinit, muuten alkoholiton</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Edustamasi taho</label>
+                            <input type="text" class="form-control" placeholder="Edustamasi taho" id="represent" name="represent">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group form-row form-group controls">
+                        <div class="col-xs-6">
+                            <label>* Haluan antaa tervehdyksen cocktail-tilaisuudessa</label>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="col-xs-3">
+                            <label class="radio-inline">
+                                <input type="radio" name="greeting" minchecked="1" data-validation-minchecked-message="Valitse toinen" value="true">
+                                <span class="radio-label">Kyllä</span>
+                            </label>
+                        </div>
+                        <div class="col-xs-3">
+                            <label class="radio-inline">
+                                <input type="radio" name="greeting" value="false">
+                                <span class="radio-label">Ei</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Lisätietoja tai terveisiä</label>
+                            <textarea rows="2" class="form-control" placeholder="Lisätietoja tai terveisiä" id="additionalInfo" name="additionalInfo"></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <br>
+                    <div id="success"></div>
+                    <div class="row">
+                        <div class="form-group col-xs-6">
+                            <button type="button" onclick="window.history.back()" class="btn btn-default btn-lg text-center"><span>Takaisin</span></button>
+                        </div>
+                        <div class="form-group col-xs-6 text-right">
+                            <button id="submitForm" type="submit" class="btn btn-submit btn-lg"><span>Lähetä</span></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://www.facebook.com/events/1249358085208772/" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; Fyysikkokilta 2016-2018</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Registration Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/config.js"></script>
+    <script src="js/registration.js"></script>
+
+</body>
+
+</html>
