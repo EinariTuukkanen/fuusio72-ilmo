@@ -86,9 +86,9 @@ $(function() {
             );
             // if (priorityUsers.length < 456 && (new Date()).getTime() >= 1485770400000) {
             var now = (new Date()).getTime();
-            if (now > 1518429600000 && now < 1520027700000) {
-                $('#registrationButtonContainer').removeClass('hidden');
-            }
+            // if (now > 1518429600000 && now < 1520027700000) {
+            $('#registrationButtonContainer').removeClass('hidden');
+            // }
             // }
             // var excess = false;
             // var prioLimit = false;
